@@ -1,0 +1,56 @@
+1
+00:00:05,000 --> 00:00:09,138
+Welcome to our solar system, a cosmic neighborhood that revolves
+
+2
+00:00:09,138 --> 00:00:10,379
+around the sun.
+
+3
+00:00:10,379 --> 00:00:14,405
+Here, we have eight planets, each with their unique features
+
+4
+00:00:14,405 --> 00:00:15,209
+and characteristics.
+
+5
+00:00:15,209 --> 00:00:18,924
+Closer to the sun, we find the inner planets: Mercury,
+
+6
+00:00:18,924 --> 00:00:20,409
+Venus, Earth, and Mars.
+
+7
+00:00:20,409 --> 00:00:25,109
+These terrestrial planets are small, dense, and have rocky surfaces.
+
+8
+00:00:25,109 --> 00:00:29,682
+Further out are the outer planets: Jupiter, Saturn, Uranus, and
+
+9
+00:00:29,682 --> 00:00:30,139
+Neptune.
+
+10
+00:00:30,139 --> 00:00:34,293
+These gas giants are much larger and composed mainly of
+
+11
+00:00:34,293 --> 00:00:35,540
+hydrogen and helium.
+
+12
+00:00:35,540 --> 00:00:39,363
+Between Mars and Jupiter lies the asteroid belt, a band
+
+13
+00:00:39,363 --> 00:00:43,187
+of rocky, icy objects left over from the early solar
+
+14
+00:00:43,187 --> 00:00:43,570
+system.
+
