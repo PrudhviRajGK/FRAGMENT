@@ -1,146 +1,183 @@
+Here is the compressed, cleaner, and more executive version. Non-essential explanations removed. Still professional, structured, and sleek.
+
+You can directly replace your README with this.
+
+---
+
 # Fragment Video Generator
 
-## Objective
+Fragment Video Generator is an AI-powered backend pipeline that converts a text topic into a fully assembled educational MP4 video.
 
-The objective of the Fragment Video Generator is to automate the creation of educational videos using Artificial Intelligence.  
-
-The system transforms a simple text topic into a complete MP4 video that includes:
-- AI-generated narration
-- AI-generated images
-- Voiceover audio
-- Subtitles
-- Intro and outro cards
-
-The goal is to save time and eliminate the need for manual scripting, illustration, voice recording, and video editing.
+The system automates script writing, image generation, voice narration, subtitle timing, and final video assembly without manual editing. It is designed as a modular and scalable AI-driven production workflow.
 
 ---
 
-## Project Overview
+## Overview
 
-Fragment Video Generator is an AI-powered video automation tool.
+**Input**
 
-When a user enters:
-- A topic (e.g., "Solar System")
-- A duration in seconds
-- Optional key points
+* Topic
+* Duration (seconds)
+* Optional key points
 
-The system automatically:
+**Output**
 
-1. Generates a structured script using GPT-4
-2. Creates scene-wise AI images using DALL-E 3
-3. Produces voice narration using Kokoro TTS
-4. Generates subtitles (.srt)
-5. Assembles everything into a final MP4 video using MoviePy
+* Fully rendered MP4 video
+* AI narration
+* Scene-based AI images
+* Timed subtitles
 
-The entire process runs in the background and typically takes 5–10 minutes.
-
-Input:
-- Topic
-- Duration
-- Key points (optional)
-
-Output:
-- A fully edited MP4 educational video with narration and subtitles
+Generation runs asynchronously and typically completes in 5–10 minutes.
 
 ---
 
-## Project Scope
+## Architecture
 
-The project is designed for:
+The system follows a structured pipeline:
 
-- Educational content creation
-- Quick explainer videos
-- Automated content generation
-- Internal team productivity enhancement
+1. GPT-4 generates scene-wise narration and image prompts
+2. DALL·E 3 creates one image per scene
+3. Kokoro TTS generates local voice narration
+4. Subtitles are timed using actual audio duration
+5. MoviePy assembles the final MP4 with intro and outro
 
-Recommended video length:
-- Best: 30–90 seconds
-- Maximum recommended: 120 seconds
-
-Current limitations:
-- Only one video can be generated at a time
-- Requires OpenAI API key
-- Generation cost depends on number of scenes (image API calls)
-
-The system can be extended in the future to:
-- Support multiple concurrent generations
-- Add user authentication
-- Deploy as a cloud-based SaaS platform
-- Support multiple voice styles
+Backend is built with FastAPI using a service-oriented modular structure.
 
 ---
 
 ## Key Features
 
-- Fully automated video generation
-- AI script writing (scene-by-scene structure)
-- AI image generation (one per scene)
-- Local voice generation (no per-audio API cost)
-- Automatic subtitle generation with perfect timing
-- Intro and outro video cards
-- Background processing (browser does not freeze)
-- Clean file management system
-- Simple web interface (no complex frontend frameworks)
+* Fully automated video generation
+* Scene-based AI scripting
+* AI image generation (1024×1024)
+* Local TTS voice synthesis
+* Automatic subtitle synchronization
+* Cinematic zoom and pan effects
+* Background processing (non-blocking)
+* Clean temporary file management
 
 ---
 
-## Sora-Style Comparison
+## Tech Stack
 
-Fragment Video Generator is inspired by the idea of AI-powered video creation similar to systems like OpenAI's Sora.
+Backend:
 
-However, there are key differences:
+* Python 3.10+
+* FastAPI
+* Uvicorn
 
-### Similarities
-- Text-to-video concept
-- AI-driven scene generation
-- Automated visual storytelling
+AI Services:
 
-### Differences
+* GPT-4
+* DALL·E 3
+* Kokoro TTS
 
-Fragment Video Generator:
-- Uses static AI images per scene
-- Adds zoom/pan effects for motion
-- Separates script, image, and audio generation
-- Runs as a backend pipeline
-- Educational focus
+Processing:
 
-Sora-style systems:
-- Generate full motion video natively
-- Use advanced generative video diffusion models
-- Produce continuous animation rather than scene-based slides
+* MoviePy
+* pysrt
+* Pydantic
+* python-dotenv
 
-Fragment acts as a modular pipeline-based educational video builder, whereas Sora-style systems aim for end-to-end generative cinematic video creation.
+Frontend:
+
+* HTML
+* Vanilla JavaScript
 
 ---
 
-## Technology Stack
+## Installation
 
-### Backend
-- Python 3.10+
-- FastAPI (Web framework)
-- Uvicorn (ASGI server)
+### Clone Repository
 
-### AI Services
-- GPT-4 (Script generation)
-- DALL-E 3 (Image generation)
-- Kokoro TTS (Voice generation, runs locally)
+```bash
+git clone https://github.com/your-username/fragment-video-generator.git
+cd fragment-video-generator
+```
 
-### Video Processing
-- MoviePy (Video assembly)
-- pysrt (Subtitle generation)
+### Setup Environment
 
-### Validation & Configuration
-- Pydantic (Input and configuration validation)
-- dotenv (.env configuration management)
+```bash
+python -m venv venv
+```
 
-### Frontend
-- HTML (templates/index.html)
-- Vanilla JavaScript (static/app.js)
+Activate:
 
-## 👥 Contributors
+Windows:
 
-- Bhavya Suman
-- Anushka Sharma
-- GK
-- Manavi Bangani
-- Rayan Qamar
+```bash
+venv\Scripts\activate
+```
+
+Mac/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### Configure Environment
+
+Copy example file:
+
+```bash
+cp .env.example .env
+```
+
+Add your OpenAI key:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+---
+
+### Run Server
+
+```bash
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Open:
+
+```
+http://localhost:8000
+```
+
+---
+
+## API Endpoints
+
+POST `/api/v1/videos/generate` – Start video generation
+GET `/api/v1/videos/list` – Retrieve completed videos
+GET `/health` – Server status
+GET `/docs` – API documentation
+
+---
+
+## Recommended Limits
+
+* Ideal video length: 30–90 seconds
+* Maximum recommended: 120 seconds
+* Only one video generation at a time
+
+---
+
+## Contributors
+
+* Bhavya Suman
+* Anushka Sharma
+* G K Prudhvi Raj
+* Manavi Bangani
+* Rayan Qamar
+
+---
+
+If you want, I can now optimize it for public GitHub visibility (stronger positioning language) or for academic submission format.
