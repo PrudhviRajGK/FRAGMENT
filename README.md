@@ -1,9 +1,3 @@
-Here is the compressed, cleaner, and more executive version. Non-essential explanations removed. Still professional, structured, and sleek.
-
-You can directly replace your README with this.
-
----
-
 # Fragment Video Generator
 
 Fragment Video Generator is an AI-powered backend pipeline that converts a text topic into a fully assembled educational MP4 video.
@@ -177,7 +171,4 @@ GET `/docs` – API documentation
 * G K Prudhvi Raj
 * Manavi Bangani
 * Rayan Qamar
-
----
-
-If you want, I can now optimize it for public GitHub visibility (stronger positioning language) or for academic submission format.
+  
